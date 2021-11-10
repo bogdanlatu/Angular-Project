@@ -1,0 +1,13 @@
+ul {
+    margin-left: calc(50% - 300px);
+}
+
+ul > li {
+    width: 300px;
+}
+
+li:nth-child(1):hover{
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}

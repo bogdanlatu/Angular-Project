@@ -1,0 +1,33 @@
+<div>
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Select the pet's status
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <button type="button" class="btn" (click)="getPetsByStatus('available')">Available</button>
+          </li>
+          <li>
+            <button type="button" class="btn" (click)="getPetsByStatus('pending')">Pending</button>
+          </li>
+          <li>
+            <button type="button" class="btn" (click)="getPetsByStatus('sold')">Sold</button>
+          </li>
+        </ul>
+    </div>
+
+    <div class="pets-list">
+<!--       <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">Name</li>
+        <li class="list-group-item">Id</li>
+    </ul> -->
+      <app-pets-list
+        *ngFor="let pet of pets"
+        [pet]="pet"
+      ></app-pets-list>
+
+    </div>
+         
+    
+
+</div>
